@@ -1,0 +1,12 @@
+{
+  "development": {
+    "apiUrl": "https://nikorz.herokuapp.com",
+    "contentApiKey": "d5167b628267cdcf436dcc9cc2",
+    "version": "v2"
+  },
+  "production": {
+    "apiUrl": "https://nikorz.herokuapp.com",
+    "contentApiKey": "d5167b628267cdcf436dcc9cc2",
+    "version": "v2"
+  }
+}
