@@ -4,7 +4,7 @@ module.exports = {
     postsPerPage: 6, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
     siteTitleMeta: `NikoRz.Dev`, // This allows an alternative site title for meta data for pages.
-    siteDescriptionMeta: `Blog de Desarrollo de App en Español`, // This allows an alternative site description for meta data for pages.
+    siteDescriptionMeta: `Blog. Arquitectura de App en Español`, // This allows an alternative site description for meta data for pages.
 
     shareImageWidth: 1000, // Change to the width of your default share image
     shareImageHeight: 523, // Change to the height of your default share image
