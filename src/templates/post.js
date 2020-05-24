@@ -37,11 +37,6 @@ const Post = ({ data, location }) => {
                 <div className="container">
                     <article className="content">
                         
-                            { post.feature_image ?
-                                <figure className="post-feature-image">
-                                    <img src={ post.feature_image } alt={ post.title } />
-                                </figure> : null }
-                        
                         <section className="post-full-content">
                             <div className="post-content-inner">
                                 <h1 className="content-title">{post.title}</h1>
@@ -54,15 +49,15 @@ const Post = ({ data, location }) => {
 
                             </div>
                             <div className="post-content-sidebar">
-                                <div className="post-date">
-                                    {post.published_at_pretty}
-                                </div>
-                                <figure className="post-feature-image">
-                                    <img src={post.feature_image} alt={post.title} />
-                                </figure>
-
                                 <div className="post-description">
                                     <h2>{post.title}</h2>
+                                    <figure className="post-feature-image">
+                                        <img src={post.feature_image} alt={post.title} />
+                                    </figure>
+                                    <div className="post-date">
+                                        {post.published_at_pretty}
+                                    </div>
+                                
                                     <p>{post.excerpt}</p>
                                     <div className="post-card-footer-left">
                                         <div className="post-card-avatar">
@@ -74,9 +69,6 @@ const Post = ({ data, location }) => {
                                         <span>{ post.primary_author.name }</span>
                                     </div>
                                 </div>
-
-                                
-
                                 <div className="post-tags">
                                     {post.tags.map((tag, index) => (
                                         <a
