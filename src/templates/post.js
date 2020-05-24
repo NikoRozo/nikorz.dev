@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
+import Disqus from 'disqus-react';
+
 /**
 * Single post view (/:slug)
 *
@@ -14,6 +16,12 @@ import { MetaData } from '../components/common/meta'
 */
 const Post = ({ data, location }) => {
     const post = data.ghostPost
+    const disqusShortname = 'nikorz-dev';
+    const disqusConfig = {
+      url: `https://nikorz.dev/${post.slug}/`,
+      identifier: post.id,
+      title: post.title
+    };
 
     return (
         <>
@@ -28,18 +36,84 @@ const Post = ({ data, location }) => {
             <Layout>
                 <div className="container">
                     <article className="content">
-                        { post.feature_image ?
-                            <figure className="post-feature-image">
-                                <img src={ post.feature_image } alt={ post.title } />
-                            </figure> : null }
+                        
+                            { post.feature_image ?
+                                <figure className="post-feature-image">
+                                    <img src={ post.feature_image } alt={ post.title } />
+                                </figure> : null }
+                        
                         <section className="post-full-content">
-                            <h1 className="content-title">{post.title}</h1>
+                            <div className="post-content-inner">
+                                <h1 className="content-title">{post.title}</h1>
 
-                            {/* The main post content */ }
-                            <section
-                                className="content-body load-external-scripts"
-                                dangerouslySetInnerHTML={{ __html: post.html }}
-                            />
+                                {/* The main post content */ }
+                                <section
+                                    className="content-body load-external-scripts"
+                                    dangerouslySetInnerHTML={{ __html: post.html }}
+                                />
+
+                            </div>
+                            <div className="post-content-sidebar">
+                                <div className="post-date">
+                                    {post.published_at_pretty}
+                                </div>
+                                <figure className="post-feature-image">
+                                    <img src={post.feature_image} alt={post.title} />
+                                </figure>
+
+                                <div className="post-description">
+                                    <h2>{post.title}</h2>
+                                    <p>{post.excerpt}</p>
+                                    <div className="post-card-footer-left">
+                                        <div className="post-card-avatar">
+                                            {post.primary_author.profile_image ?
+                                                <img className="author-profile-image" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
+                                                <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
+                                            }
+                                        </div>
+                                        <span>{ post.primary_author.name }</span>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div className="post-tags">
+                                    {post.tags.map((tag, index) => (
+                                        <a
+                                        className="post-tag"
+                                        href={`/tag/${tag.slug}`}
+                                        key={index}
+                                        >
+                                        #{tag.name}
+                                        </a>
+                                    ))}
+                                </div>
+                                <div className="post-follow follow-twitter">
+                                    <a href="https://twitter.com/NikoRozoArch" target="_blank" rel="noopener noreferrer">
+                                        <img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /> Sígueme @NikoRozoArch
+                                    </a>
+                                </div>
+
+                                <div className="post-follow follow-facebook">
+                                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                                        <img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /> Sígueme @NikoRozoArch
+                                    </a>
+                                </div>
+
+                                <div className="post-coffee">
+                                    <a href="https://www.buymeacoffee.com/NikoRz" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" />
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <section className="post-full-content">
+                            <div className="post-disqus">
+                                <Disqus.DiscussionEmbed
+                                shortname={disqusShortname}
+                                config={disqusConfig}
+                                />
+                            </div>
                         </section>
                     </article>
                 </div>
