@@ -64,7 +64,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <Navigation data={site.navigation} navClass="site-nav-item" />
                                 </div>
                                 <div className="site-nav-right">
-                                    <Link className="site-nav-button" to="/about">About</Link>
+                                    <a className="site-nav-button" href={'https://cv.nikorz.dev/'} rel="noopener noreferrer">About</a>
                                 </div>
                             </nav>
                         </div>
