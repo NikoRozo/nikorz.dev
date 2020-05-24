@@ -95,7 +95,7 @@ const Post = ({ data, location }) => {
                                 </div>
 
                                 <div className="post-follow follow-facebook">
-                                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://facebook.com/NikoRz-104620944605700" target="_blank" rel="noopener noreferrer">
                                         <img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /> Sígueme @NikoRozoArch
                                     </a>
                                 </div>
