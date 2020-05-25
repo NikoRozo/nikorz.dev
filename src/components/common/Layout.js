@@ -98,7 +98,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div className="home-description">
                                     <br/>
                                     <p>
-                                        Sígueme en mis redes sociales, para estar informados 😊
+                                        Sígueme en mis redes sociales, para estar informado 😊
                                     </p>
                                 </div>
 
