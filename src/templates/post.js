@@ -55,7 +55,7 @@ const Post = ({ data, location }) => {
                                         <img src={post.feature_image} alt={post.title} />
                                     </figure>
                                     <div className="post-date">
-                                        {post.published_at_pretty}
+                                        {post.updated_at_pretty}
                                     </div>
                                 
                                     <p>{post.excerpt}</p>
