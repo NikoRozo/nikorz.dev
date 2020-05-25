@@ -44,6 +44,14 @@ module.exports = {
                 name: `pages`,
             },
         },
+        // Google Analytics
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+              trackingId: "UA-167582792-1",
+            },
+          },
         // Setup for optimised images.
         // See https://www.gatsbyjs.org/packages/gatsby-image/
         {
