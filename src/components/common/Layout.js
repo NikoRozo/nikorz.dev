@@ -79,10 +79,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div>
                             <div className="post-content-sidebar">
                                 <div className="home-description">
-                                    <h2>Post Destacados</h2>
+                                    <h2>Post Destacados ✨</h2>
                                     <p>
-                                        Estos son mis post principales, donde estaré informando 
-                                        y recopilando las actualizaciones a los recursos publicados:
+                                    Estaré informando y recopilando las actualizaciones a 
+                                    los recursos publicados en los siguientes posts 👍🏻
                                     </p>
                                 </div>
 
@@ -90,9 +90,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <Link to="/rompe-tus-limites">Rompe tus Limites!!!</Link><br/>
                                     <Link to="/aws">Todo de AWS</Link><br/>
                                     <Link to="/java">Todo de Java</Link><br/>
-                                    <Link to="/docker">Todo de Docker</Link>
-                                    <Link to="/node-js">Todo de Node.js</Link><br/>
+                                    <Link to="/docker">Todo de Docker</Link><br/>
                                     <Link to="/angular">Todo de Angular</Link><br/>
+                                    <Link to="/node-js">Todo de Node.js</Link>
                                 </div>
 
                                 <div className="home-description">
