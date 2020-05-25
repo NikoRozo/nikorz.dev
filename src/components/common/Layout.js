@@ -71,9 +71,59 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     </header>
 
                     <main className="site-main">
-                        {/* All the main content gets inserted here, index.js, post.js */}
-                        {children}
+                        { isHome ?
+                        <div className="home-full-content">
+                            <div className="post-content-inner">
+                                {/* All the main content gets inserted here, index.js, post.js */}
+                                {children}
+                            </div>
+                            <div className="post-content-sidebar">
+                                <div className="home-description">
+                                    <h2>Post Destacados</h2>
+                                    <p>
+                                        Estos son mis post principales, donde estaré informando 
+                                        y recopilando las actualizaciones a los recursos publicados:
+                                    </p>
+                                </div>
+
+                                <div className="home-links">
+                                    <Link to="/rompe-tus-limites">Rompe tus Limites!!!</Link><br/>
+                                    <Link to="/aws">Todo de AWS</Link><br/>
+                                    <Link to="/java">Todo de Java</Link><br/>
+                                    <Link to="/docker">Todo de Docker</Link>
+                                    <Link to="/node-js">Todo de Node.js</Link><br/>
+                                    <Link to="/angular">Todo de Angular</Link><br/>
+                                </div>
+
+                                <div className="home-description">
+                                    <br/>
+                                    <p>
+                                        Sígueme en mis redes sociales, para estar informados 😊
+                                    </p>
+                                </div>
+
+                                <div className="post-follow follow-twitter">
+                                    <a href="https://twitter.com/NikoRozoArch" target="_blank" rel="noopener noreferrer">
+                                        <img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /> Sígueme
+                                    </a>
+                                </div>
+
+                                <div className="post-follow follow-facebook">
+                                    <a href="https://facebook.com/NikoRz-104620944605700" target="_blank" rel="noopener noreferrer">
+                                        <img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /> Sígueme
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        :
+                        <div>
+                            {/* All the main content gets inserted here, index.js, post.js */}
+                            {children}
+                        </div>
+                        }
                     </main>
+
+                    
 
                 </div>
 

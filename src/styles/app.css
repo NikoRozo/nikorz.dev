@@ -160,6 +160,7 @@ img {
 html {
     box-sizing: border-box;
     font-family: sans-serif;
+    color: #fff;
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -568,8 +569,23 @@ h6 {
     color: #fff;
 }
 
+.home-full-content {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: .5em;
+    grid-row-gap: .5em;
+    margin: 1em 1em 1em 1em;
+    color: #fff;
+}
+
 @media (max-width: 680px) {
-    .post-full-content  {
+    .post-full-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .home-full-content {
         grid-template-columns: 1fr;
     }
 }
@@ -602,7 +618,7 @@ h6 {
     color: white;
     padding: 3px;
     display: inline-block;
-    margin: 0 0 1em 0;
+    margin: 0 .5em 1em 0;
 }
 
 .follow-twitter {
@@ -641,6 +657,33 @@ h6 {
     font-size: 16px;
     font-weight: normal;
     margin: 0 0 0 12px;
+}
+
+.home-description {
+    font-size: 16px;
+    color: rgb(231, 231, 231);
+}
+
+.home-description h2 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 0;
+}
+
+.home-links {
+    margin: .5em .5em .5em 1em;
+}
+
+.home-links a {
+    color: #fff;
+    border: rgb(14, 223, 14) 1px solid;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    line-height: 1em;
+    border-radius: var(--radius);
+    margin: .5em .5em .5em .5em;
+    font-size: 16px;
 }
 
 .post-content-inner .kg-embed-card {
@@ -852,7 +895,6 @@ h6 {
     font-size: 1.3rem;
     line-height: 1em;
     border-radius: var(--radius);
-    opacity: 0.7;
 }
 
 .site-nav-button:hover {
@@ -929,7 +971,7 @@ h6 {
 .post-card-image {
     margin: 0 0 .5em 0;
     width: auto;
-    height: 200px;
+    height: 170px;
     background: var(--color-secondary) no-repeat center center;
     background-size: cover;
     border-radius: .5em;
