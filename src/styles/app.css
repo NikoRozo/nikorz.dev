@@ -893,6 +893,9 @@ h6 {
     border-radius: 5px;
     background-color: #141f2d;
     color: white;
+    margin: 0;
+    margin-bottom: .5em;
+    position: relative;
 }
 
 .post-card:hover {
@@ -920,7 +923,7 @@ h6 {
 .post-card-excerpt {
     font-size: 1.6rem;
     line-height: 1.55em;
-    margin: 0 0 .5em 1em;
+    margin: 0 0 4.2em 1em;
 }
 
 .post-card-image {
@@ -938,6 +941,9 @@ h6 {
     justify-content: space-between;
     margin: 1em 1em 1em 1em;
     color: #fff;
+    bottom: 0;
+    width: 90%;
+    position: absolute;
 }
 
 .post-card-footer-left {
