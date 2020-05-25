@@ -59,15 +59,19 @@ const Post = ({ data, location }) => {
                                     </div>
                                 
                                     <p>{post.excerpt}</p>
+
                                     <div className="post-card-footer-left">
-                                        <div className="post-card-avatar">
-                                            {post.primary_author.profile_image ?
-                                                <img className="author-profile-image" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
-                                                <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
-                                            }
+                                        <div className="post-card-avatar">   
+                                            <a href={`/author/${post.primary_author.slug}`}>     
+                                                {post.primary_author.profile_image ?
+                                                    <img className="author-profile-image" src={post.primary_author.profile_image} alt={post.primary_author.name}/> :
+                                                    <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
+                                                }
+                                            </a>
                                         </div>
                                         <span>{ post.primary_author.name }</span>
                                     </div>
+                                    
                                 </div>
                                 <div className="post-tags">
                                     {post.tags.map((tag, index) => (

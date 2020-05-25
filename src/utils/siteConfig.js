@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: `https://www.nikorz.dev/`, // Site domain. Do not include a trailing slash!
+    siteUrl: `https://nikorz.dev/`, // Site domain. Do not include a trailing slash!
 
     postsPerPage: 6, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
