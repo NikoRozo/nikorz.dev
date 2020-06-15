@@ -90,7 +90,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <div className="home-links">
                                         <Link to="/rompe-tus-limites">Rompe tus Limites!!!</Link><br/>
                                         <Link to="/aws">Todo de AWS</Link><br/>
-                                        <Link to="/aws">Todo de GCP</Link><br/>
+                                        <Link to="/gcp">Todo de GCP</Link><br/>
                                         <Link to="/java">Todo de Java</Link><br/>
                                         <Link to="/docker">Todo de Docker</Link><br/>
                                         <Link to="/angular">Todo de Angular</Link><br/>
