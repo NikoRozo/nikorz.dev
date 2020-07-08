@@ -71,7 +71,7 @@ const generateRSSFeed = function generateRSSFeed(siteConfig) {
         query: `
         {
             allGhostPost(
-                sort: {order: DESC, fields: published_at}
+                sort: {order: DESC, fields: updated_at}
             ) {
                 edges {
                     node {
