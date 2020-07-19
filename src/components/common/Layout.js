@@ -22,7 +22,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
-
+    const githubUrl = 'https://github.com/NikoRozo'
+    const emailbUrl = 'mailto:nicolas.rozo@nikorz.dev'
+    
     return (
         <>
             <Helmet>
@@ -49,6 +51,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div className="site-mast-right">
                                     { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
                                     { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
+                                    <a href={ githubUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.png" alt="GitHub" /></a>
+                                    <a href={ emailbUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/email.png" alt="EMail NikoRz.Dev" /></a>
                                     <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
                                 </div>
                             </div>
