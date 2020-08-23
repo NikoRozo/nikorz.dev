@@ -190,9 +190,7 @@ h1 {
     margin: 0.67em 0;
     font-size: 2em;
 }
-h2 {
-    color: #fff;
-}
+
 small {
     font-size: 80%;
 }
@@ -717,6 +715,7 @@ h6 {
 .content-body h5,
 .content-body h6 {
     font-family: var(--font-sans-serif);
+    color: #AAFF01;
 }
 
 .content-body h1 {
@@ -733,7 +732,7 @@ h6 {
 .content-title {
     margin: 0 0 0.8em;
     font-size: 5rem;
-    color: #fff;
+    color: #AAFF01;
 }
 @media (max-width: 500px) {
     .content-title {
