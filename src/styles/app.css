@@ -588,6 +588,7 @@ h6 {
 @media (max-width: 680px) {
     .post-full-content {
         grid-template-columns: 1fr;
+        display: inline;
     }
 }
 
@@ -811,6 +812,22 @@ h6 {
     background: var(--color-base);
     color: #fff;
     border-radius: 12px;
+}
+
+.player {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.player iframe, .player object, .player embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 /* Header
